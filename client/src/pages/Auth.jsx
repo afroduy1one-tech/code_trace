@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import { Link, useNavigate } from 'react-router-dom'
+import { Link, Navigate, useNavigate } from 'react-router-dom'
 
 import { login, register } from '../api/auth'
 import { useAuth } from '../context/AuthContext'
@@ -18,7 +18,11 @@ export default function Auth() {
   const [error, setError] = useState('')
   const [submitting, setSubmitting] = useState(false)
 
-  const { login: setUser } = useAuth()
+  const {
+    login: setUser,
+    user,
+    loading: authLoading,
+  } = useAuth()
   const navigate = useNavigate()
 
   function handleChange(event) {
@@ -54,6 +58,14 @@ export default function Auth() {
   }
 
   const isLogin = mode === 'login'
+  
+  if (authLoading) {
+    return null
+  }
+
+  if (user) {
+    return <Navigate to="/" replace />
+  }
 
  return (
   <>
