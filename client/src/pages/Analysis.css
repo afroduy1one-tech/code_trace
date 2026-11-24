@@ -1,0 +1,233 @@
+.analysis-page {
+  width: min(100% - 2 * var(--page-padding), var(--container-width));
+  margin: 0 auto;
+  padding: 28px 0 80px;
+}
+
+.analysis-breadcrumbs {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+  margin-bottom: 36px;
+}
+
+.analysis-breadcrumbs a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.analysis-breadcrumbs a:hover {
+  color: var(--color-accent);
+}
+
+.analysis-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  padding-bottom: 32px;
+}
+
+.analysis-heading h1 {
+  margin: 12px 0 8px;
+  font-family: var(--font-display);
+  font-size: clamp(36px, 5vw, 54px);
+  font-weight: 400;
+}
+
+.analysis-heading p {
+  margin: 0;
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.analysis-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 10px;
+  color: var(--color-text-muted);
+  font-size: 12px;
+}
+
+.analysis-status {
+  padding: 6px 10px;
+  background: var(--color-surface-dark);
+  color: var(--color-text-muted);
+}
+
+.analysis-status.status-completed {
+  background: #e5ece2;
+  color: var(--color-success);
+}
+
+.analysis-status.status-failed {
+  background: var(--color-accent-soft);
+  color: var(--color-danger);
+}
+
+.analysis-tabs {
+  display: flex;
+  gap: 28px;
+  overflow-x: auto;
+  border-top: var(--border);
+  border-bottom: var(--border);
+}
+
+.analysis-tabs button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-shrink: 0;
+  padding: 17px 0;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -1px;
+  background: transparent;
+  color: var(--color-text-muted);
+  font-family: var(--font-body);
+  font-size: 13px;
+  cursor: pointer;
+  transition: color var(--transition);
+}
+
+.analysis-tabs button:hover,
+.analysis-tabs button.active {
+  color: var(--color-text);
+}
+
+.analysis-tabs button.active {
+  border-bottom-color: var(--color-accent);
+}
+
+.analysis-tabs button span {
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.analysis-content {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(280px, 1fr);
+  border-bottom: var(--border);
+}
+
+.analysis-main {
+  min-width: 0;
+  padding: 32px 32px 40px 0;
+  border-right: var(--border);
+}
+
+.analysis-sidebar {
+  min-width: 0;
+  padding: 32px 0 32px 32px;
+}
+
+.analysis-sidebar h2,
+.analysis-placeholder h2 {
+  margin: 12px 0 24px;
+  font-family: var(--font-display);
+  font-size: 27px;
+  font-weight: 400;
+}
+
+.analysis-placeholder {
+  min-height: 360px;
+  padding: 28px;
+  border: var(--border);
+  background: var(--color-surface);
+}
+
+.analysis-placeholder p {
+  max-width: 420px;
+  color: var(--color-text-muted);
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.analysis-route-preview {
+  display: flex;
+  flex-direction: column;
+}
+
+.analysis-route-item {
+  display: grid;
+  grid-template-columns: 30px 1fr;
+  gap: 12px;
+  padding: 14px 0;
+  border-top: var(--border);
+}
+
+.analysis-route-item > span {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.analysis-route-item p {
+  margin: 0;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.analysis-route-link {
+  display: inline-block;
+  margin-top: 20px;
+  color: var(--color-accent);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.analysis-message,
+.analysis-error {
+  padding: 40px 0;
+  color: var(--color-text-muted);
+}
+
+.analysis-error {
+  color: var(--color-danger);
+}
+
+.analysis-back-link {
+  color: var(--color-accent);
+  font-size: 13px;
+  text-decoration: none;
+}
+
+@media (max-width: 900px) {
+  .analysis-content {
+    grid-template-columns: 1fr;
+  }
+
+  .analysis-main {
+    padding-right: 0;
+    border-right: none;
+    border-bottom: var(--border);
+  }
+
+  .analysis-sidebar {
+    padding: 32px 0;
+  }
+}
+
+@media (max-width: 600px) {
+  .analysis-heading {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .analysis-meta {
+    align-items: flex-start;
+  }
+
+  .analysis-tabs {
+    gap: 20px;
+  }
+
+  .analysis-placeholder {
+    padding: 20px;
+  }
+}

@@ -20,8 +20,7 @@ export default function Header() {
   return (
     <header className="site-header">
       <Link to="/" className="site-header__logo">
-        <span className="site-header__mark">CT</span>
-        <span>CODE TRACE</span>
+        CODE TRACE
       </Link>
 
       <nav className="site-header__nav">

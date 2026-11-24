@@ -1,82 +1,119 @@
-.how-section {
-  max-width: var(--container-width);
-  margin: 0 auto;
-  padding: 100px var(--page-padding) 110px;
-}
 
-.how-section__heading {
-  margin-bottom: 64px;
-}
-
-.how-section__heading h2 {
-  margin: 24px 0 0;
-  color: var(--color-text);
-  font-family: var(--font-display);
-  font-size: clamp(38px, 4.5vw, 60px);
-  line-height: 1.08;
-  letter-spacing: -0.04em;
-}
-
-.how-section__steps {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
+.upload-section {
+  max-width: 1280px;
+  margin: 90px auto 0;
+  padding: 65px var(--page-padding) 90px;
   border-top: 1px solid var(--color-line);
 }
 
-.how-step {
-  min-height: 190px;
-  padding: 28px 32px 0 0;
+.upload-section__heading {
+  margin-bottom: 36px;
+  text-align: center;
 }
 
-.how-step + .how-step {
-  padding-left: 32px;
-  border-left: 1px solid var(--color-line);
-}
-
-.how-step__number {
+.upload-section__heading h2 {
+  margin: 18px 0 10px;
   color: var(--color-accent);
-  font-family: var(--font-mono);
-  font-size: 12px;
-}
-
-.how-step h3 {
-  margin: 36px 0 12px;
   font-family: var(--font-display);
-  font-size: 25px;
-  font-weight: 400;
+  font-size: clamp(38px, 5vw, 58px);
+  font-weight: 500;
 }
 
-.how-step p {
-  max-width: 310px;
-  margin: 0;
+.upload-section__heading p {
+  max-width: 480px;
+  margin: 0 auto;
   color: var(--color-text-muted);
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1.7;
 }
 
-@media (max-width: 768px) {
-  .how-section {
-    padding-top: 72px;
-    padding-bottom: 76px;
+.upload-form {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.upload-form label {
+  display: block;
+  margin-bottom: 10px;
+  color: var(--color-text-muted);
+  font-family: var(--font-mono);
+  font-size: 10px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.upload-form__controls {
+  display: flex;
+  gap: 10px;
+}
+
+.upload-form input {
+  flex: 1;
+  min-width: 0;
+  padding: 16px 18px;
+  border: 1px solid var(--color-line);
+  border-radius: 0;
+  outline: none;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-size: 13px;
+  transition: border-color var(--transition);
+}
+
+.upload-form input:focus {
+  border-color: var(--color-accent);
+}
+
+.upload-form input::placeholder {
+  color: #a99a91;
+}
+
+.upload-form button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 0 22px;
+  border: 1px solid var(--color-accent);
+  border-radius: 0;
+  background: var(--color-accent);
+  color: var(--color-surface);
+  font-size: 12px;
+  transition: background var(--transition);
+}
+
+.upload-form button:hover {
+  background: var(--color-accent-hover);
+}
+
+.upload-form button span {
+  font-size: 17px;
+}
+
+.upload-form__note {
+  margin: 14px 0 0;
+  color: var(--color-text-muted);
+  font-size: 11px;
+}
+
+.upload-form__note a {
+  color: var(--color-accent);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+@media (max-width: 600px) {
+  .upload-section {
+    margin-top: 60px;
+    padding-top: 50px;
+    padding-bottom: 60px;
   }
 
-  .how-section__heading {
-    margin-bottom: 42px;
+  .upload-form__controls {
+    flex-direction: column;
   }
 
-  .how-section__steps {
-    grid-template-columns: 1fr;
-  }
-
-  .how-step,
-  .how-step + .how-step {
-    min-height: auto;
-    padding: 26px 0;
-    border-left: none;
-    border-bottom: 1px solid var(--color-line);
-  }
-
-  .how-step h3 {
-    margin-top: 20px;
+  .upload-form button {
+    min-height: 50px;
   }
 }

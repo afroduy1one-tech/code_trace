@@ -1,37 +1,38 @@
+
 :root {
   /* Цвета */
-  --color-bg: #f4f0e6;
-  --color-surface: #fbf8f1;
-  --color-surface-dark: #eae5d9;
+  --color-bg: #f1ead9;
+  --color-surface: #fffaf0;
+  --color-surface-dark: #e8dfcf;
 
-  --color-text: #24221f;
-  --color-text-muted: #817b70;
-  --color-line: #d8d1c4;
+  --color-text: #211418;
+  --color-text-muted: #8c7775;
+  --color-line: #b8aaa0;
 
-  --color-accent: #6b1f2a;
-  --color-accent-hover: #501620;
-  --color-accent-soft: #f1e1e1;
+  --color-accent: #570e20;
+  --color-accent-hover: #3f0917;
+  --color-accent-soft: #ead9d9;
 
   --color-success: #456b4a;
   --color-warning: #a47735;
   --color-danger: #a33c36;
 
   /* Типографика */
-  --font-display: 'Iowan Old Style', 'Palatino Linotype', Georgia, serif;
-  --font-body: 'Helvetica Neue', Arial, sans-serif;
+  --font-display: 'Cormorant Garamond', Georgia, serif;
+  --font-body: 'Manrope', Arial, sans-serif;
   --font-mono: 'SFMono-Regular', Consolas, monospace;
 
   /* Размеры */
   --container-width: 1440px;
-  --page-padding: 40px;
+  --page-padding: 5%;
   --header-height: 76px;
 
   /* Интерфейс */
   --border: 1px solid var(--color-line);
-  --radius-sm: 4px;
-  --radius-md: 10px;
+  --radius-sm: 2px;
+  --radius-md: 4px;
 
-  --transition: 180ms ease;
+  --transition: 220ms ease;
 }
 
 @media (max-width: 768px) {

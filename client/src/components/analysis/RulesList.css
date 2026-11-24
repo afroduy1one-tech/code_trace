@@ -1,0 +1,76 @@
+.rules-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.rules-list-heading {
+  padding-bottom: 20px;
+  border-bottom: var(--border);
+}
+
+.rules-list-heading h2,
+.rules-empty h2 {
+  margin: 12px 0 8px;
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 400;
+}
+
+.rules-list-heading p,
+.rules-empty p {
+  color: var(--color-text-muted);
+  font-size: 13px;
+}
+
+.rules-list-items {
+  display: flex;
+  flex-direction: column;
+}
+
+.rules-list-card {
+  padding: 20px 4px;
+  border-bottom: var(--border);
+}
+
+.rules-list-card-head {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+
+.rules-list-number {
+  color: var(--color-accent);
+  font-family: var(--font-mono);
+  font-size: 12px;
+}
+
+.rules-list-code {
+  padding: 5px 8px;
+  background: var(--color-surface);
+  color: var(--color-text);
+  font-family: var(--font-mono);
+  font-size: 11px;
+}
+
+.rules-list-status {
+  margin-left: auto;
+  color: var(--color-success);
+  font-size: 11px;
+}
+
+.rules-list-card > p {
+  margin: 0;
+  color: var(--color-text);
+  font-size: 14px;
+  line-height: 1.7;
+  overflow-wrap: anywhere;
+}
+
+.rules-empty {
+  padding: 32px;
+  border: var(--border);
+  background: var(--color-surface);
+}

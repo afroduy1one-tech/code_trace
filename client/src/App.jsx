@@ -7,6 +7,7 @@ import Projects from './pages/Projects'
 import ProtectedRoute from './components/ProtectedRoute'
 import Project from './pages/Project'
 import History from './pages/History'
+import Analysis from './pages/Analysis'
 
 function App() {
   return (
@@ -37,6 +38,15 @@ function App() {
         element={
           <ProtectedRoute>
             <Project />
+          </ProtectedRoute>
+        }
+      />
+
+      <Route
+        path="/analysis/:id"
+        element={
+          <ProtectedRoute>
+            <Analysis />
           </ProtectedRoute>
         }
       />
