@@ -8,6 +8,7 @@ import {
 import {
   getCurrentUser,
   logout as logoutRequest,
+  updateUserLevel,
 } from '../api/auth'
 
 const AuthContext = createContext(null)
@@ -53,12 +54,22 @@ export function AuthProvider({ children }) {
     setUser(userData.user ?? userData)
   }
 
+  async function updateLevel(level) {
+  const data = await updateUserLevel(level)
+
+  setUser((currentUser) => ({
+      ...currentUser,
+      level: data.level,
+    }))
+  }
+
   const value = {
     user,
     loading,
     isAuthenticated: Boolean(user),
     login,
     logout,
+    updateLevel,
     setUser,
   }
 
