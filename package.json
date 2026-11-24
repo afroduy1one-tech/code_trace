@@ -1,0 +1,27 @@
+{
+  "name": "code-trace",
+  "version": "1.0.0",
+  "private": true,
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch src/index.js",
+    "create-admin": "node scripts/create-admin.js",
+    "seed": "node scripts/seed.js",
+    "smoke": "node scripts/smoke.js"
+  },
+  "dependencies": {
+  "adm-zip": "^0.5.16",
+  "bcryptjs": "^2.4.3",
+  "cookie-parser": "^1.4.7",
+  "csurf": "^1.11.0",
+  "dotenv": "^16.4.5",
+  "express": "^4.21.2",
+  "express-rate-limit": "^7.4.1",
+  "express-validator": "^7.2.0",
+  "helmet": "^8.0.0",
+  "jsonwebtoken": "^9.0.2",
+  "multer": "^1.4.5-lts.1",
+  "mysql2": "^3.11.5"
+}
+}
